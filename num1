@@ -1,0 +1,40 @@
+n=int(input("enter your money"))
+i=0
+j=0
+k=0
+z=0
+#while n>0:
+while n>=1000:
+    n=n-1000
+    i=i+1
+while n>=500:
+    n=n-500
+    j=j+1
+while n>=200:
+    n=n-200
+    k=k+1
+while n>=100:
+    n=n-100
+    z=z+1
+s=" "
+if i>0:
+    s=s+str(i)+"(1000 bill)"
+    if j or k or z == True:
+        s=s+","
+if j>0:
+    s=s+str(j)+"(500 bill)"
+    if k or z == True:
+        s=s+","
+if k>0:
+    s=s+str(k)+"(200 bill)"
+    if z == True:
+        s=s+","
+if z>0:
+    if i>0 or j>0 or k>0:
+        s=s+"and"
+if z>0:
+    s=s+str(z)+"(100 bill)"
+print(s)
+
+
+
